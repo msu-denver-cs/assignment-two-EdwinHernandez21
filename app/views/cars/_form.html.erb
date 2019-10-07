@@ -27,8 +27,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :part_name %>
-    <%= form.text_field :part_name %>
+    <%= form.label :cars_parts %><br>
+    <%= form.collection_check_boxes(:part_ids, Part.all, :id, :part_name) %>
+
   </div>
 
   <div class="actions">

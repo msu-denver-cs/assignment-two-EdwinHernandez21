@@ -22,7 +22,9 @@
 
 <p>
   <strong>Part name:</strong>
-  <%= @car.part_name %>
+    <% @car.parts.each do |part| %>
+    <li><%= part.part_name %></li>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
